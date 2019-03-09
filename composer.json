@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Vcn\\AutoloadVerifier\\": "src/"
+        }
+    },
+    "require": {
+        "nikic/php-parser": "^4.2",
+        "lstrojny/functional-php": "^1.9",
+        "symfony/finder": "^4.2"
+    }
+}
