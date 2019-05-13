@@ -1,4 +1,5 @@
 {
+    "name": "vcn/autoload-verifier",
     "autoload": {
         "psr-4": {
             "Vcn\\AutoloadVerifier\\": "src/"

@@ -22,7 +22,7 @@ class AutoloadVerifier
         $notFoundClasses = filter($classInfos, function (ClassInfo $classInfo) {
             try {
                 return !class_exists($classInfo->class);
-            } catch (\Error $error) {
+            } catch (\Throwable $error) {
                 echo "Error loading class {$classInfo->class}\n";
                 echo (string) $error;
             }
