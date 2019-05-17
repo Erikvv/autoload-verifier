@@ -42,8 +42,8 @@ class Report
     {
         /** @var ClassInfo $classInfo */
         foreach ($this->classesNotKnownToAutoloader as $classInfo) {
-            echo "File  : " . $classInfo->file . "\n";
-            echo "Class : " . $classInfo->class . "\n\n";
+            echo "File  : " . $classInfo->getFile() . "\n";
+            echo "Class : " . $classInfo->getClass() . "\n\n";
         }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Vcn\AutoloadVerifier\Test;
 
+use function Functional\invoke;
 use function Functional\pluck;
 use PHPUnit\Framework\TestCase;
 use Vcn\AutoloadVerifier\ClassFinder;
@@ -45,6 +46,6 @@ class ClassFinderTest extends TestCase
         $classFinder = new ClassFinder();
         $classInfos = $classFinder->findClassesInFile(__DIR__ . '/../test-assets/' . $file);
 
-        self::assertEquals($expectedClasses, pluck($classInfos, 'class'));
+        self::assertEquals($expectedClasses, invoke($classInfos, 'getClass'));
     }
 }

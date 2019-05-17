@@ -20,11 +20,13 @@ class AutoloadVerifier
         require_once $projectAutoloader;
 
         $notFoundClasses = filter($classInfos, function (ClassInfo $classInfo) {
+            $class = $classInfo->getClass();
             try {
-                return !class_exists($classInfo->class);
+                return !class_exists($class);
             } catch (\Throwable $error) {
-                echo "Error loading class {$classInfo->class}\n";
+                echo "Error loading class {$class}\n";
                 echo (string) $error;
+                return true;
             }
         });
 

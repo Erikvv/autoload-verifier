@@ -57,6 +57,7 @@ class ClassFinder
             echo (string)$e;
         }
 
+        // adds property "namespacedName" to Class_'s found
         $this->nodeTraverser->traverse($nodes);
         $classNodes = $this->nodeFinder->findInstanceOf($nodes, Class_::class);
 

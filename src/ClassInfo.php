@@ -4,9 +4,9 @@ namespace Vcn\AutoloadVerifier;
 
 class ClassInfo
 {
-    public $file;
+    private $file;
 
-    public $class;
+    private $class;
 
     public function __construct(
         string $file,
@@ -14,5 +14,15 @@ class ClassInfo
     ) {
         $this->file = $file;
         $this->class = $class;
+    }
+
+    public function getFile(): string
+    {
+        return $this->file;
+    }
+
+    public function getClass(): string
+    {
+        return $this->class;
     }
 }
