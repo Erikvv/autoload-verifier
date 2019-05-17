@@ -3,7 +3,6 @@
 namespace Vcn\AutoloadVerifier\Test;
 
 use function Functional\invoke;
-use function Functional\pluck;
 use PHPUnit\Framework\TestCase;
 use Vcn\AutoloadVerifier\ClassFinder;
 
